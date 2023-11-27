@@ -22,7 +22,7 @@ body {
 }
 
 header{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -30,6 +30,14 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: transparent;
+    z-index: 1000;
+}
+
+header.scrolled-down {
+    background: rgb(253, 67, 129);
+    transition: all 0.3s ease;
+    padding: 10px 100px; 
 }
 
 header .logo{
@@ -158,7 +166,7 @@ header .navbar li a:hover{
 section{
     height: 750px;
     width: 100%;
-    background-color: aqua;
+    background-color: black;
 }
 
 
@@ -224,6 +232,10 @@ section{
     }
     header{
         padding: 30px 40px;
+    }
+
+    header.scrolled-down {
+        padding: 30px 40px; 
     }
 
     header .navbar{
@@ -314,6 +326,15 @@ section{
 
     header {
         padding: 10px 10px;
+    }
+
+    header.scrolled-down {
+        padding: 10px 10px;
+    }
+
+    header .navbar.active{
+        height: calc(100% - 80px);
+        top: 80px;
     }
 
     header .logo{
