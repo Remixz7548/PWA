@@ -1,0 +1,346 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.head{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(253,67,129); 
+    padding: 100px;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    width: 100px;
+    padding: 0px 10px;
+}
+
+header .navbar{
+    position: relative;
+    display: flex;
+}
+
+header .navbar li{
+    list-style: none;
+    margin-left: 30px;
+}
+
+header .navbar li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    transition: 0.3s;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+header .navbar li a:hover{
+    color: rgb(92,37,161);
+}
+
+.contenido{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+}
+
+
+.contenido .tituloBox{
+    position: relative;
+    max-width: 600px;
+}
+
+.contenido .tituloBox h2{
+    font-size: 4.5em;
+    text-transform: uppercase;
+    color: rgb(92,37,161);
+    line-height: 1.2;
+}
+
+.contenido .tituloBox h2 span{
+    background-color: rgb(92,37,161);
+    color: #ffffff;
+    padding: 0px 10px;
+    font-weight: 600;
+}
+
+.contenido .tituloBox p{
+    font-size: 1.8em;
+    line-height: 1.5;
+    color: rgb(92,37,161);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.contenido .tituloBox a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: rgb(92,37,161);
+    border-radius: 15px;
+    padding: 10px 80px;
+    width: 100%;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.contenido .imgBox{
+    width: 600px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 50px;
+}
+
+.contenido .imgBox img{
+    width: 500px;
+}
+
+
+
+.circulo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(92,37,161);
+    clip-path: circle(650px at right 750px);
+    width: 100%;
+    height: 100%;
+}
+
+.redes{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px 30px;
+    list-style: none;
+}
+
+.redes li{
+    padding: 10px;
+}
+
+.redes li a{
+    color: #ffffff;
+    font-size: 1.5em;
+    transition: 0.3s;
+}
+
+section{
+    height: 750px;
+    width: 100%;
+    background-color: aqua;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1200px){
+    .contenido .tituloBox h2{
+        font-size: 3.5em;
+    }
+}
+
+@media only screen and (max-width: 992px){
+    .head{
+        padding: 80px 40px;
+    }
+    header{
+        padding: 40px 40px;
+    }
+    .contenido .tituloBox h2{
+        font-size: 2.5em;
+    }
+
+    .contenido .tituloBox a{
+        padding: 10px 35px;
+    }
+
+    .contenido .imgBox{
+        width: 400px;
+        padding-right: 20px;
+    }
+
+    .contenido .imgBox img{
+        width: 400px;
+    }
+
+    .redes{
+        padding: 0px 40px 30px;
+    }
+
+    .circulo{
+        clip-path: circle(550px at right 750px);
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .head{
+        padding: 40px;
+    }
+    header{
+        padding: 30px 40px;
+    }
+
+    header .navbar{
+        display: none;
+    }
+
+    header .navbar.active{
+        width: 100vw;
+        height: calc(100% - 100px);
+        position: fixed;
+        top: 100px;
+        left:0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: rgb(253,67,129);
+        z-index: 1;
+    }
+
+    header .navbar li{
+        list-style: none;
+        margin-left: 0px;
+    }
+
+    header .navbar li a{
+        font-size: 1.2em;
+        line-height: 2;
+    }
+
+    .menuToggle{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url(img/menu.png);
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    .menuToggle.active{
+        background: url(img/close.png);
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .contenido{
+        flex-direction: column;
+        gap: 70px;
+        margin-top: 70px;
+        padding-left: 0;
+    }
+
+    .contenido .tituloBox{
+        text-align: center;
+    }
+
+    .contenido .tituloBox h2{
+        font-size: 2em;
+    }
+
+    .contenido .tituloBox p{
+        font-size: 1.5em;
+    }
+
+    .contenido .imgBox{
+        width: 450px;
+    }
+
+    .contenido .imgBox img{
+        width: 400px;
+        padding-right: 50px;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .circulo{
+        clip-path: circle(400px at center bottom);
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .head{
+        padding: 10px;
+    }
+
+    header {
+        padding: 10px 10px;
+    }
+
+    header .logo{
+        width: 90px;
+    }
+
+    .contenido{
+        padding-left: 0px;
+    }
+
+    .contenido .imgBox{
+        width: 350px;
+    }
+
+    .contenido .imgBox img{
+        width: 100%;
+        padding-right: 0px;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .redes{
+        right: auto;
+        padding: 40px 0 0 0;
+    }
+
+    .redes li a{
+        font-size: 2em;
+    }
+}
