@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="img/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -16,10 +18,10 @@
             <a href="index.html"><img class="logo" src="img/logo.png" alt="logo"></a>
             <div class="menuToggle" onclick="toggleMenu()"></div>
             <ul class="navbar">
-                <li><a href="" onclick="toggleMenu()">History</a></li>
-                <li><a href="" onclick="toggleMenu()">Characters</a></li>
-                <li><a href="" onclick="toggleMenu()">Contact</a></li>
-                <li><a href="" onclick="toggleMenu()">About</a></li>
+                <li><a href="#historia" onclick="toggleMenu()">History</a></li>
+                <li><a href="#personajes" onclick="toggleMenu()">Characters</a></li>
+                <li><a href="#contactanos" onclick="toggleMenu()">Contact</a></li>
+                <li><a href="#acerca" onclick="toggleMenu()">About</a></li>
             </ul>
         </header>
 
@@ -35,13 +37,13 @@
             </div>
         </div>
         <div class="redes">
-            <li><a href=""><ion-icon name="logo-facebook"></ion-icon></a></li>
-            <li><a href=""><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61553811560998&mibextid=ZbWKwL"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="https://wa.me/message/OD7MKD6BEK32B1"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
         </div>
     </div>
     <section>
         <div class="subcontent">
-            <h1 style="margin-top: 0px;">History</h1>
+            <h1 style="margin-top: 0px;" id="historia">History</h1>
             <p>Gaddis was a passionate researcher and lover of stories, especially those her father used to tell her. Her life was dedicated to studying, defending and protecting her father's stories and ideals. In college, she spent most of her time in the library, immersed in ancient books and manuscripts that fed her thirst for knowledge.<br><br>
                 However, one day like any other, her world was shaken. She heard voices of peers accusing her father of being crazy and that all the ideas embodied in his books were mere hallucinations. Worse, they attributed the same madness to her. Gaddis could not contain her anger and responded vehemently, "You are the crazy ones, my father is better than you could ever be."<br><br>
                 Fed up with the unfounded accusations about her father, Gaddis decided to embark on a voyage across the Pacific Ocean. She took a small boat and brought her father's belongings and stories with her, hoping to find the place he had described in his books.<br><br>
@@ -54,7 +56,7 @@
             </p>
         </div>
         <div class="subcontent">
-            <h1>Characters</h1>
+            <h1 id="personajes">Characters</h1>
             <div class="flex">
                 <div class="persona">
                     <p class="subtitulo" style="margin-top: 10px; text-align: center;">Gaddis</p>
@@ -118,7 +120,7 @@
     </section>
     <section style="background: linear-gradient(90deg, rgba(92,37,161,1) 0%, rgba(253,67,129,1) 100%); padding: 0px 0px 50px;">
         <div class="subcontent">
-            <h1 style="color: #ffffff;">Contact</h1>
+            <h1 style="color: #ffffff;" id="contactanos">Contact</h1>
             <div class="con-contact">
                 <div class="mapa">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29712.898207998107!2d-104.9038565!3d21.42483145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84273123eaaaf2b9%3A0x16adf6ada41de099!2sUniversidad%20Tecnol%C3%B3gica%20de%20Nayarit!5e0!3m2!1ses!2smx!4v1701127594376!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -128,7 +130,10 @@
                     <form action="" id="contactForm">
                         <input type="text" id="name" placeholder="Nombre*" required>
                         <input type="email" id="email" placeholder="Email*" required>
-                        <textarea placeholder="Mensaje*" id="message" required></textarea>
+                        <div class="textarea-container">
+                            <textarea placeholder="Mensaje*" id="message" required></textarea>
+                            <ion-icon class="mic" id="grabar" name="mic-outline"></ion-icon>
+                        </div>
                         <input type="submit" class="enviar">
                     </form>
                 </div>
@@ -137,7 +142,7 @@
     </section>
     <section>
         <div class="subcontent">
-            <h1>About</h1>
+            <h1 id="acerca">About</h1>
             <h1 style="margin-bottom: 10px; font-size: 18px;">Game Requirements</h1>
             <div class="con-about">
                 <div class="reque" style="margin-right: 10px;">
@@ -184,9 +189,15 @@
         <p>© 2023 All rights reserved, NexusGrove®</p>
     </footer>
 </body>
-<script src="index.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script src="firebase.js"></script>
+<script src="index.js"></script>
+<script src="voz.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src="firebase.js"></script>
+<script>
+    if('serviceWorker' in navigator){
+        navigator.serviceWorker.register('/sw.js', {scope:'/'});
+    }
+</script>
 </html>
