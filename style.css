@@ -2,12 +2,21 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Pixelify Sans', sans-serif;
 }
 
+span{
+    font-weight: 700;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap');
 body {
     margin: 0;
     padding: 0;
+}
+
+a{
+    text-decoration: none;
 }
 
 .head{
@@ -164,10 +173,272 @@ header .navbar li a:hover{
 }
 
 section{
-    height: 750px;
+    height: 100%;
     width: 100%;
-    background-color: black;
+    background-color:#ffffff;
 }
+
+.subcontent{
+    padding: 50px 100px 0px;
+}
+
+.subcontent h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.subcontent p{
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.persona{
+    background-color: #ffffff;
+    margin: 0px;
+    border-radius: 15px;
+    width: 320px;
+}
+
+.persona .subtitulo{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+.persona .subtext{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.persona .contsprite{
+    display: flex;
+    justify-content: center;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    background: linear-gradient(180deg, #5c25a1 0%, #fd4381 50%, #ffffff 100%);
+}
+
+.sprite1{
+    height: 320px;
+    width: 320px;
+    animation-name: sprite1; 
+    animation-duration: 1.5s;
+    background: url("img/gaddis.png") center center/cover;
+    animation-timing-function: steps(8);
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+.sprite2{
+    height: 320px;
+    width: 320px;
+    animation-name: sprite2; 
+    animation-duration: 1.5s;
+    background: url("img/mascara.png") center center/cover;
+    animation-timing-function: steps(6);
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+.sprite3{
+    height: 320px;
+    width: 320px;
+    animation-name: sprite3; 
+    animation-duration: 1.5s;
+    background: url("img/leviatan.png") center center/cover;
+    animation-timing-function: steps(14);
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+.sprite4{
+    height: 320px;
+    width: 320px;
+    animation-name: sprite4; 
+    animation-duration: 1.5s;
+    background: url("img/chimera.png") center center/cover;
+    animation-timing-function: steps(14);
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+.sprite5{
+    height: 320px;
+    width: 320px;
+    animation-name: sprite5; 
+    animation-duration: 1.5s;
+    background: url("img/agua.png") center center/cover;
+    animation-timing-function: steps(8);
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+.sprite6{
+    height: 320px;
+    width: 320px;
+    animation-name: sprite6; 
+    animation-duration: 1.5s;
+    background: url("img/lodo.png") center center/cover;
+    animation-timing-function: steps(7);
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+.sprite7{
+    height: 320px;
+    width: 320px;
+    animation-name: sprite7; 
+    animation-duration: 1.5s;
+    background: url("img/espectro.png") center center/cover;
+    animation-timing-function: steps(8);
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+@keyframes sprite1{
+    from { background-position: 0px; }
+    to { background-position: -2560px; }
+}
+
+@keyframes sprite2{
+    from { background-position: 0px; }
+    to { background-position: -1920px; }
+}
+
+@keyframes sprite3{
+    from { background-position: 0px; }
+    to { background-position: -4480px; }
+}
+
+@keyframes sprite4{
+    from { background-position: 0px; }
+    to { background-position: -4480px; }
+}
+
+@keyframes sprite5{
+    from { background-position: 0px; }
+    to { background-position: -2560px; }
+}
+
+@keyframes sprite6{
+    from { background-position: 0px; }
+    to { background-position: -2240px; }
+}
+
+@keyframes sprite7{
+    from { background-position: 0px; }
+    to { background-position: -2560px; }
+}
+
+
+
+.con-contact{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.con-contact .mapa{
+    width: 48%;
+}
+
+.con-contact .mapa iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.con-contact .form{
+    width: 48%;
+}
+
+.con-contact .form form{
+    width: 100%;
+}
+
+.con-contact .form form textarea,
+.con-contact .form form input{
+    width: 100%;
+    margin: 10px 0px;
+    padding: 10px;
+}
+
+.con-contact .form form textarea{
+    height: 200px;
+    margin: 10px 0px 0px;
+}
+
+.con-contact .form form .enviar{
+    color: #ffffff;
+    background: rgb(92,37,161);
+    border-radius: 15px;
+    padding: 10px 80px;
+    width: 100%;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    border-style: none;
+    cursor: pointer;
+}
+
+.con-about{
+    display: flex;
+    justify-content: space-between;
+}
+
+.con-about .con-red{
+    display: flex;
+    width: 100%;
+}
+
+.con-about .con-red ion-icon{
+    font-size: 30px;
+    margin: 5px;
+    border-radius: 50%;
+}
+
+.imgsprite{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.imgsprite .spritesocial {
+    height: 280px;
+    width: 320px;
+    background: url("img/Defeat.png") center center/cover;
+    animation-name: spritesocial; 
+    animation-duration: 1.5s;
+    animation-timing-function: steps(10);
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+@keyframes spritesocial {
+    from { background-position: 0px; }
+    to { background-position: -3200px; }
+}
+
+footer{
+    width: 100%;
+    background-color: #5c25a1;
+    padding: 10px;
+}
+
+footer p{
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+
 
 
 
@@ -190,6 +461,125 @@ section{
 @media only screen and (max-width: 1200px){
     .contenido .tituloBox h2{
         font-size: 3.5em;
+    }
+
+    .persona{
+        background-color: #ffffff;
+        margin: 0px;
+        border-radius: 15px;
+        width: 250px;
+    }
+
+    .sprite1{
+        height: 250px;
+        width: 250px;
+        animation-name: sprite1; 
+        animation-duration: 1.5s;
+        background: url("img/gaddis.png") center center/cover;
+        animation-timing-function: steps(8);
+        animation-iteration-count: infinite;
+        position: relative;
+    }
+    
+    .sprite2{
+        height: 250px;
+        width: 250px;
+        animation-name: sprite2; 
+        animation-duration: 1.5s;
+        background: url("img/mascara.png") center center/cover;
+        animation-timing-function: steps(6);
+        animation-iteration-count: infinite;
+        position: relative;
+    }
+    
+    .sprite3{
+        height: 250px;
+        width: 250px;
+        animation-name: sprite3; 
+        animation-duration: 1.5s;
+        background: url("img/leviatan.png") center center/cover;
+        animation-timing-function: steps(14);
+        animation-iteration-count: infinite;
+        position: relative;
+    }
+    
+    .sprite4{
+        height: 250px;
+        width: 250px;
+        animation-name: sprite4; 
+        animation-duration: 1.5s;
+        background: url("img/chimera.png") center center/cover;
+        animation-timing-function: steps(14);
+        animation-iteration-count: infinite;
+        position: relative;
+    }
+    
+    .sprite5{
+        height: 250px;
+        width: 250px;
+        animation-name: sprite5; 
+        animation-duration: 1.5s;
+        background: url("img/agua.png") center center/cover;
+        animation-timing-function: steps(8);
+        animation-iteration-count: infinite;
+        position: relative;
+    }
+    
+    .sprite6{
+        height: 250px;
+        width: 250px;
+        animation-name: sprite6; 
+        animation-duration: 1.5s;
+        background: url("img/lodo.png") center center/cover;
+        animation-timing-function: steps(7);
+        animation-iteration-count: infinite;
+        position: relative;
+    }
+    
+    .sprite7{
+        height: 250px;
+        width: 250px;
+        animation-name: sprite7; 
+        animation-duration: 1.5s;
+        background: url("img/espectro.png") center center/cover;
+        animation-timing-function: steps(8);
+        animation-iteration-count: infinite;
+        position: relative;
+    }
+    
+    @keyframes sprite1{
+        from { background-position: 0px; }
+        to { background-position: -2000px; }
+    }
+    
+    @keyframes sprite2{
+        from { background-position: 0px; }
+        to { background-position: -1500px; }
+    }
+    
+    @keyframes sprite3{
+        from { background-position: 0px; }
+        to { background-position: -3500px; }
+    }
+    
+    @keyframes sprite4{
+        from { background-position: 0px; }
+        to { background-position: -3500px; }
+    }
+    
+    @keyframes sprite5{
+        from { background-position: 0px; }
+        to { background-position: -2000px; }
+    }
+    
+    @keyframes sprite6{
+        from { background-position: 0px; }
+        to { background-position: -1750px; }
+    }
+    
+    @keyframes sprite7{
+        from { background-position: 0px; }
+        to { background-position: -2000px; }
     }
 }
 
@@ -223,6 +613,130 @@ section{
 
     .circulo{
         clip-path: circle(550px at right 750px);
+    }
+
+
+    .contenido .tituloBox h2{
+        font-size: 3.5em;
+    }
+
+    .persona{
+        background-color: #ffffff;
+        margin: 0px;
+        border-radius: 15px;
+        width: 200px;
+    }
+
+    .sprite1{
+        height: 200px;
+        width: 200px;
+        animation-name: sprite1; 
+        animation-duration: 1.5s;
+        background: url("img/gaddis.png") center center/cover;
+        animation-timing-function: steps(8);
+        animation-iteration-count: infinite;
+        position: relative;
+    }
+    
+    .sprite2{
+        height: 200px;
+        width: 200px;
+        animation-name: sprite2; 
+        animation-duration: 1.5s;
+        background: url("img/mascara.png") center center/cover;
+        animation-timing-function: steps(6);
+        animation-iteration-count: infinite;
+        position: relative;
+    }
+    
+    .sprite3{
+        height: 200px;
+        width: 200px;
+        animation-name: sprite3; 
+        animation-duration: 1.5s;
+        background: url("img/leviatan.png") center center/cover;
+        animation-timing-function: steps(14);
+        animation-iteration-count: infinite;
+        position: relative;
+    }
+    
+    .sprite4{
+        height: 200px;
+        width: 200px;
+        animation-name: sprite4; 
+        animation-duration: 1.5s;
+        background: url("img/chimera.png") center center/cover;
+        animation-timing-function: steps(14);
+        animation-iteration-count: infinite;
+        position: relative;
+    }
+    
+    .sprite5{
+        height: 200px;
+        width: 200px;
+        animation-name: sprite5; 
+        animation-duration: 1.5s;
+        background: url("img/agua.png") center center/cover;
+        animation-timing-function: steps(8);
+        animation-iteration-count: infinite;
+        position: relative;
+    }
+    
+    .sprite6{
+        height: 200px;
+        width: 200px;
+        animation-name: sprite6; 
+        animation-duration: 1.5s;
+        background: url("img/lodo.png") center center/cover;
+        animation-timing-function: steps(7);
+        animation-iteration-count: infinite;
+        position: relative;
+    }
+    
+    .sprite7{
+        height: 200px;
+        width: 200px;
+        animation-name: sprite7; 
+        animation-duration: 1.5s;
+        background: url("img/espectro.png") center center/cover;
+        animation-timing-function: steps(8);
+        animation-iteration-count: infinite;
+        position: relative;
+    }
+    
+    @keyframes sprite1{
+        from { background-position: 0px; }
+        to { background-position: -1600px; }
+    }
+    
+    @keyframes sprite2{
+        from { background-position: 0px; }
+        to { background-position: -1200px; }
+    }
+    
+    @keyframes sprite3{
+        from { background-position: 0px; }
+        to { background-position: -2800px; }
+    }
+    
+    @keyframes sprite4{
+        from { background-position: 0px; }
+        to { background-position: -2800px; }
+    }
+    
+    @keyframes sprite5{
+        from { background-position: 0px; }
+        to { background-position: -1600px; }
+    }
+    
+    @keyframes sprite6{
+        from { background-position: 0px; }
+        to { background-position: -1400px; }
+    }
+    
+    @keyframes sprite7{
+        from { background-position: 0px; }
+        to { background-position: -1600px; }
     }
 }
 
@@ -317,6 +831,157 @@ section{
     .circulo{
         clip-path: circle(400px at center bottom);
     }
+
+
+
+    .subcontent{
+        padding: 30px 40px 0px;
+    }
+
+    .flex{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .persona{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .sprite1{
+        height: 320px;
+        width: 320px;
+        animation-name: sprite1; 
+        animation-duration: 1.5s;
+        background: url("img/gaddis.png") center center/cover;
+        animation-timing-function: steps(8);
+        animation-iteration-count: infinite;
+        position: relative;
+    }
+    
+    .sprite2{
+        height: 320px;
+        width: 320px;
+        animation-name: sprite2; 
+        animation-duration: 1.5s;
+        background: url("img/mascara.png") center center/cover;
+        animation-timing-function: steps(6);
+        animation-iteration-count: infinite;
+        position: relative;
+    }
+    
+    .sprite3{
+        height: 320px;
+        width: 320px;
+        animation-name: sprite3; 
+        animation-duration: 1.5s;
+        background: url("img/leviatan.png") center center/cover;
+        animation-timing-function: steps(14);
+        animation-iteration-count: infinite;
+        position: relative;
+    }
+    
+    .sprite4{
+        height: 320px;
+        width: 320px;
+        animation-name: sprite4; 
+        animation-duration: 1.5s;
+        background: url("img/chimera.png") center center/cover;
+        animation-timing-function: steps(14);
+        animation-iteration-count: infinite;
+        position: relative;
+    }
+    
+    .sprite5{
+        height: 320px;
+        width: 320px;
+        animation-name: sprite5; 
+        animation-duration: 1.5s;
+        background: url("img/agua.png") center center/cover;
+        animation-timing-function: steps(8);
+        animation-iteration-count: infinite;
+        position: relative;
+    }
+    
+    .sprite6{
+        height: 320px;
+        width: 320px;
+        animation-name: sprite6; 
+        animation-duration: 1.5s;
+        background: url("img/lodo.png") center center/cover;
+        animation-timing-function: steps(7);
+        animation-iteration-count: infinite;
+        position: relative;
+    }
+    
+    .sprite7{
+        height: 320px;
+        width: 320px;
+        animation-name: sprite7; 
+        animation-duration: 1.5s;
+        background: url("img/espectro.png") center center/cover;
+        animation-timing-function: steps(8);
+        animation-iteration-count: infinite;
+        position: relative;
+    }
+    
+    @keyframes sprite1{
+        from { background-position: 0px; }
+        to { background-position: -2560px; }
+    }
+    
+    @keyframes sprite2{
+        from { background-position: 0px; }
+        to { background-position: -1920px; }
+    }
+    
+    @keyframes sprite3{
+        from { background-position: 0px; }
+        to { background-position: -4480px; }
+    }
+    
+    @keyframes sprite4{
+        from { background-position: 0px; }
+        to { background-position: -4480px; }
+    }
+    
+    @keyframes sprite5{
+        from { background-position: 0px; }
+        to { background-position: -2560px; }
+    }
+    
+    @keyframes sprite6{
+        from { background-position: 0px; }
+        to { background-position: -2240px; }
+    }
+    
+    @keyframes sprite7{
+        from { background-position: 0px; }
+        to { background-position: -2560px; }
+    }
+
+
+
+    .con-contact{
+        flex-direction: column-reverse;
+    }
+
+    .con-contact .form,
+    .con-contact .mapa{
+        width: 100%;
+    }
+
+    .con-contact .mapa{
+        height: 400px;
+    }
+
+    .con-about{
+        flex-direction: column;
+    }
+
+    
 }
 
 @media only screen and (max-width: 450px){
@@ -363,5 +1028,9 @@ section{
 
     .redes li a{
         font-size: 2em;
+    }
+
+    .subcontent{
+        padding: 20px;
     }
 }
